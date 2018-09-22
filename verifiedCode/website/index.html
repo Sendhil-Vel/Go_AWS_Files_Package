@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="js/angular.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/uploadfactory.js"></script>
+<head>
+	<title></title>
+</head>
+<body ng-app="fileUpload" ng-controller="ctrlFileUpload">
+	<form method="POST" name="frmUploadFiles" ng-submit="UploadMyFiles(frmUploadFiles.$valid)">
+		<div class="text-content">
+			<div class="head-title">
+				<h1>Title</h1>
+			</div>
+			<div class="img-main-dv">
+				<div class="image_div">
+					<!--
+						<input type="file" name="upload" id="upload" class="file_control" ng-click="onFileSelect(this)">
+					-->
+					<input id="upload" type="file" class="file_control" onchange="angular.element(this).scope().onFileSelect(this)" accept="application/pdf">
+				<!--
+					<img class="uploadimg" src="img/upload_letter.png" ng-click="clickUpload()">
+				-->
+					<p class="flnm">{{filename}}</p>
+					<p class="msgupload" ng-show="fileinprocess">Please wait uploading file .......</p>
+				</div>
+			</div>
+		</div>
+	</form>	
+</body>
+</html>

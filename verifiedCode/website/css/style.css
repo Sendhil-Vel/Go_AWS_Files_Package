@@ -1,0 +1,48 @@
+html, body {
+		height: 100%;
+		display: block;
+	}
+	.head-title {
+		text-align: center;
+	}
+	.text-content {
+		width: 100%;
+		height: 100%;
+		display: table;
+	}
+	.img-main-dv {
+		vertical-align: middle;
+	}
+	.image_div {
+		height: 50px;
+	    width: 40%;
+	    border: 2px dashed #CCC;
+	    border-radius: 5px;
+	    text-align: center;
+	    position: relative;
+	    margin: auto;
+		/*font-family: FontAwesome;*/
+	}
+	.image_div_btn {
+		text-align: center;
+		margin-top: 22px;
+	}
+	.file_control {
+		height: 100%;
+	    width: 100%;
+	    opacity: 0;
+		z-index: 9;
+	}
+	.image_div::after {
+		content: "Upload Image";
+		/*content: "\f093"*/
+	    opacity: 0.4;
+	    vertical-align: middle;
+	    line-height: 50px;
+	    position: absolute;
+	    top: 0;
+	    z-index: -1;
+	    text-align: center;
+	    width: 100%;
+	    left: 0;
+	}
