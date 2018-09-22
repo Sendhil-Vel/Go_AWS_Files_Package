@@ -280,7 +280,7 @@ func SetupPackage(vLogStatus bool, vAwsAccessKey string, vAwsSecretKey string, v
 	}
 
 	/*
-		Set value of variable awsBaseEndpoint.
+		Set value of variable uploadBucket.
 		If missing then message will printed and execution will be stopped
 	*/
 	if vUploadBucket == "" {
@@ -288,11 +288,11 @@ func SetupPackage(vLogStatus bool, vAwsAccessKey string, vAwsSecretKey string, v
 		return
 	} else {
 		loginfo("Parameter exists [vUploadBucket]")
-		awsBaseEndpoint = vUploadBucket
+		uploadBucket = vUploadBucket
 	}
 
 	/*
-		Set value of variable uploadBucket.
+		Set value of variable awsBaseEndpoint.
 		If missing then message will printed and execution will be stopped
 	*/
 	if vAwsBaseEndpoint == "" {
@@ -300,7 +300,7 @@ func SetupPackage(vLogStatus bool, vAwsAccessKey string, vAwsSecretKey string, v
 		return
 	} else {
 		loginfo("Parameter exists [vAwsBaseEndpoint]")
-		uploadBucket = vAwsBaseEndpoint
+		awsBaseEndpoint = vAwsBaseEndpoint
 	}
 
 	/*
